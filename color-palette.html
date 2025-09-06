@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-default">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font: Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <title>ClothCraft - Funky Fashion for Youth</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- <div class="theme-toggle-container">
+                <div id="theme-name" style="
+                text-align: center;
+                font-weight: bold;
+                font-size: 0.9rem;
+                color: #ffffff;
+                margin-bottom: 4px;
+                background-color: #242424;
+                padding: 0.75rem;
+                border-radius: 0.75rem;
+                ">
+                    Theme: theme-default
+                </div>
+                <button onclick="switchTheme(-1)">← Prev Theme</button>
+                <button onclick="switchTheme(1)">Next Theme →</button>
+            </div> -->
+
+    <div class="header-group">
+        <div id="topbar-container">
+            <div class="looto-bar" id="looto-bar">
+                🔥 LOOTO EVENT: Coming anytime today! Be ready for 5 minutes of insane offers!
+                <button class="looto-close" onclick="manuallyHideLootoBar()">&times;</button>
+            </div>
+        </div>
+
+        <header class="brand-bar">
+            <div class="search-container">
+                <input type="text" placeholder="Search products..." class="search-input">
+                <span class="search-icon">🔍</span>
+            </div>
+            <div class="brand-name">HypeHem</div>
+            <div class="nav-icons">
+                <span title="Wishlist">🤍</span>
+                <span title="Cart">🛒</span>
+                <span title="Profile">👤</span>
+                <span title="Menu">☰</span>
+            </div>
+        </header>
+        <div class="categories-bar">
+            Men | Women | Oversized Tees | Streetwear | Gymwear | Casuals | Denims | Ethnic Fusion | Kids | New Arrivals
+            |
+            Accessories
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="cover">
+            <!-- <h1>ClothCraft</h1>
+                <p>Funky, stylish, modern fashion at affordable prices</p>
+                <div class="cta-btn">Shop Now</div> -->
+        </div>
+
+        <section class="section">
+            <h2 class="section-title">Popular Products</h2>
+            <div class="grid">
+                <div class="product-card">
+                    <img src="./assets/img-1.jpg">
+                    <div class="badges">
+                        <div class="badge badge-popular">Popular</div>
+                        <div class="badge badge-offer">20% Off</div>
+                    </div>
+                    <div class="wishlist" onclick="this.classList.toggle('active')">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                    2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                    C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42
+                    22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <div class="info">
+                        <h3><span>Graphic Tee</span> <span>₹599</span></h3>
+                        <div class="stars">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p>Cool and comfy graphic tee for your daily flex... <a href="#">View more</a></p>
+                        <div class="btns">
+                            <button class="btn-cart">Add to Cart</button>
+                            <button class="btn-checkout">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/img-2.jpg">
+                    <div class="badges">
+                        <div class="badge badge-new">New</div>
+                    </div>
+                    <div class="wishlist" onclick="this.classList.toggle('active')">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                    2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                    C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42
+                    22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <div class="info">
+                        <h3><span>Printed Tee</span> <span>₹699</span></h3>
+                        <div class="stars">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p>Stylish printed tee that matches your vibe... <a href="#">View more</a></p>
+                        <div class="btns">
+                            <button class="btn-cart">Add to Cart</button>
+                            <button class="btn-checkout">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/img-3.jpg">
+                    <div class="badges">
+                        <div class="badge badge-new">New</div>
+                    </div>
+                    <div class="wishlist" onclick="this.classList.toggle('active')">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                    2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                    C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42
+                    22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <div class="info">
+                        <h3><span>Printed Tee</span> <span>₹699</span></h3>
+                        <div class="stars">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                        </div>
+                        <p>Stylish printed tee that matches your vibe... <a href="#">View more</a></p>
+                        <div class="btns">
+                            <button class="btn-cart">Add to Cart</button>
+                            <button class="btn-checkout">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/img-4.jpg">
+                    <div class="badges">
+                        <div class="badge badge-new">New</div>
+                    </div>
+                    <div class="wishlist" onclick="this.classList.toggle('active')">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                    2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                    C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42
+                    22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <div class="info">
+                        <h3><span>Printed Tee</span> <span>₹699</span></h3>
+                        <div class="stars">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p>Stylish printed tee that matches your vibe... <a href="#">View more</a></p>
+                        <div class="btns">
+                            <button class="btn-cart">Add to Cart</button>
+                            <button class="btn-checkout">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/img-5.jpg">
+                    <div class="badges">
+                        <div class="badge badge-new">New</div>
+                    </div>
+                    <div class="wishlist" onclick="this.classList.toggle('active')">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                    2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                    C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42
+                    22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <div class="info">
+                        <h3><span>Printed Tee</span> <span>₹699</span></h3>
+                        <div class="stars">
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p>Stylish printed tee that matches your vibe... <a href="#">View more</a></p>
+                        <div class="btns">
+                            <button class="btn-cart">Add to Cart</button>
+                            <button class="btn-checkout">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/img-6.jpg">
+                    <div class="badges">
+                        <div class="badge badge-new">New</div>
+                    </div>
+                    <div class="wishlist" onclick="this.classList.toggle('active')">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                    2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                    C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42
+                    22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <div class="info">
+                        <h3><span>Printed Tee</span> <span>₹699</span></h3>
+                        <div class="stars">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p>Stylish printed tee that matches your vibe... <a href="#">View more</a></p>
+                        <div class="btns">
+                            <button class="btn-cart">Add to Cart</button>
+                            <button class="btn-checkout">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/img-7.jpg">
+                    <div class="badges">
+                        <div class="badge badge-new">New</div>
+                    </div>
+                    <div class="wishlist" onclick="this.classList.toggle('active')">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                    2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                    C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42
+                    22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <div class="info">
+                        <h3><span>Printed Tee</span> <span>₹699</span></h3>
+                        <div class="stars">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p>Stylish printed tee that matches your vibe... <a href="#">View more</a></p>
+                        <div class="btns">
+                            <button class="btn-cart">Add to Cart</button>
+                            <button class="btn-checkout">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">New Arrivals</h2>
+            <div class="grid">
+                <div class="product-card">
+                    <img src="./assets/img-8.jpg">
+                    <div class="badges">
+                        <div class="badge badge-popular">Popular</div>
+                        <div class="badge badge-offer">20% Off</div>
+                    </div>
+                    <div class="wishlist" onclick="this.classList.toggle('active')">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42
+                22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <div class="info">
+                        <h3><span>Graphic Tee</span> <span>₹599</span></h3>
+                        <div class="stars">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p>Cool and comfy graphic tee for your daily flex... <a href="#">View more</a></p>
+                        <div class="btns">
+                            <button class="btn-cart">Add to Cart</button>
+                            <button class="btn-checkout">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/img-9.jpg">
+                    <div class="badges">
+                        <div class="badge badge-new">New</div>
+                    </div>
+                    <div class="wishlist" onclick="this.classList.toggle('active')">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42
+                22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <div class="info">
+                        <h3><span>Printed Tee</span> <span>₹699</span></h3>
+                        <div class="stars">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p>Stylish printed tee that matches your vibe... <a href="#">View more</a></p>
+                        <div class="btns">
+                            <button class="btn-cart">Add to Cart</button>
+                            <button class="btn-checkout">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/img-10.jpg">
+                    <div class="badges">
+                        <div class="badge badge-new">New</div>
+                    </div>
+                    <div class="wishlist" onclick="this.classList.toggle('active')">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42
+                22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <div class="info">
+                        <h3><span>Printed Tee</span> <span>₹699</span></h3>
+                        <div class="stars">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p>Stylish printed tee that matches your vibe... <a href="#">View more</a></p>
+                        <div class="btns">
+                            <button class="btn-cart">Add to Cart</button>
+                            <button class="btn-checkout">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/img-11.jpg">
+                    <div class="badges">
+                        <div class="badge badge-new">New</div>
+                    </div>
+                    <div class="wishlist" onclick="this.classList.toggle('active')">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42
+                22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <div class="info">
+                        <h3><span>Printed Tee</span> <span>₹699</span></h3>
+                        <div class="stars">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p>Stylish printed tee that matches your vibe... <a href="#">View more</a></p>
+                        <div class="btns">
+                            <button class="btn-cart">Add to Cart</button>
+                            <button class="btn-checkout">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/img-12.jpg">
+                    <div class="badges">
+                        <div class="badge badge-new">New</div>
+                    </div>
+                    <div class="wishlist" onclick="this.classList.toggle('active')">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42
+                22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <div class="info">
+                        <h3><span>Printed Tee</span> <span>₹699</span></h3>
+                        <div class="stars">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                        </div>
+                        <p>Stylish printed tee that matches your vibe... <a href="#">View more</a></p>
+                        <div class="btns">
+                            <button class="btn-cart">Add to Cart</button>
+                            <button class="btn-checkout">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/img-13.jpg">
+                    <div class="badges">
+                        <div class="badge badge-new">New</div>
+                    </div>
+                    <div class="wishlist" onclick="this.classList.toggle('active')">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42
+                22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <div class="info">
+                        <h3><span>Printed Tee</span> <span>₹699</span></h3>
+                        <div class="stars">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p>Stylish printed tee that matches your vibe... <a href="#">View more</a></p>
+                        <div class="btns">
+                            <button class="btn-cart">Add to Cart</button>
+                            <button class="btn-checkout">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/img-14.jpg">
+                    <div class="badges">
+                        <div class="badge badge-new">New</div>
+                    </div>
+                    <div class="wishlist" onclick="this.classList.toggle('active')">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42
+                22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <div class="info">
+                        <h3><span>Printed Tee</span> <span>₹699</span></h3>
+                        <div class="stars">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p>Stylish printed tee that matches your vibe... <a href="#">View more</a></p>
+                        <div class="btns">
+                            <button class="btn-cart">Add to Cart</button>
+                            <button class="btn-checkout">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 ClothCraft. All rights reserved.</p>
+        <p>Terms | Privacy | Support</p>
+    </footer>
+
+    <script>
+        const themes = [
+            'theme-default',
+            // 'theme-default-1',
+            // 'theme-default-2',
+            // 'theme-citrus',
+            // 'theme-urban',
+            // 'theme-funky',
+            // 'theme-pop',
+            // 'theme-youth-vibe',
+            // 'theme-bollywood-burst',
+            // 'theme-mint-mode',
+            // 'theme-street-vibe',
+            // 'theme-modern-minimal',
+            // 'theme-contemporary-indian',
+            // 'theme-trendy-youth',
+            // 'theme-earth-natural'
+        ];
+
+        let currentTheme = 0;
+
+        function switchTheme(direction) {
+            currentTheme = (currentTheme + direction + themes.length) % themes.length;
+            console.log("???", currentTheme);
+
+            document.documentElement.className = themes[currentTheme];
+            document.getElementById("theme-name").innerText = "Theme: " + themes[currentTheme];
+        }
+
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     document.getElementById("theme-name").innerText = "Theme: " + themes[currentTheme];
+        // });
+
+        let isLootoBarVisible = true;
+        let toggleInterval;
+        let userManuallyClosed = false;
+
+        function showLootoBar() {
+            if (!userManuallyClosed) {
+                const container = document.getElementById("topbar-container");
+                container.innerHTML = `
+                    <div class="looto-bar" id="looto-bar">
+                        🔥 LOOTO EVENT: Coming anytime today! Be ready for 5 minutes of insane offers!
+                        <button class="looto-close" onclick="manuallyHideLootoBar()">&times;</button>
+                    </div>
+                `;
+                isLootoBarVisible = true;
+            }
+        }
+
+        function showDefaultBar() {
+            if (!userManuallyClosed) {
+                const container = document.getElementById("topbar-container");
+                container.innerHTML = `<div class="default-bar">FREE SHIPPING | EASY RETURNS | 24x7 SUPPORT</div>`;
+                isLootoBarVisible = false;
+            }
+        }
+
+        function toggleBars() {
+            if (isLootoBarVisible) {
+                showDefaultBar();
+            } else {
+                showLootoBar();
+            }
+        }
+
+        function manuallyHideLootoBar() {
+            userManuallyClosed = true;
+            clearInterval(toggleInterval);
+
+            const container = document.getElementById("topbar-container");
+            container.innerHTML = `<div class="default-bar">FREE SHIPPING | EASY RETURNS | 24x7 SUPPORT</div>`;
+            isLootoBarVisible = false;
+        }
+
+        toggleInterval = setInterval(toggleBars, 15000);
+
+        setTimeout(() => {
+            if (!userManuallyClosed) {
+                showDefaultBar();
+            }
+        }, 15000);        
+    </script>
+</body>
+
+</html>
